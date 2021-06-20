@@ -14,6 +14,7 @@
 			</ion-header>
 
 			<div id="container">
+				<ion-button @click="test()">Test button</ion-button>
 				<strong>Ready to create an app?</strong>
 				<p
 					>Start with Ionic
@@ -25,7 +26,7 @@
 </template>
 
 <script>
-import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar} from "@ionic/vue";
+import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton} from "@ionic/vue";
 import {defineComponent} from "vue";
 
 export default defineComponent({
@@ -36,6 +37,12 @@ export default defineComponent({
 		IonPage,
 		IonTitle,
 		IonToolbar,
+		IonButton,
+	},
+	methods: {
+		test() {
+			window.alert("in test");
+		},
 	},
 });
 </script>
