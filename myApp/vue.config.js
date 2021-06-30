@@ -15,7 +15,7 @@ module.exports = {
 					...options,
 					compilerOptions: {
 						...(options.compilerOptions || {}),
-						isCustomElement: (tag) => /^(trix|gcse|ion)/i.test(tag),
+						isCustomElement: (tag) => /^(trix|gcse)/i.test(tag),
 					},
 				};
 			});

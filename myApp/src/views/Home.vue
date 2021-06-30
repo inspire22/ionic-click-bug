@@ -14,7 +14,7 @@
 			</ion-header>
 
 			<div id="container">
-				<ion-button @click="test()">Test button</ion-button>
+				<ion-button @click.native="test()">Test button</ion-button>
 				<strong>Ready to create an app?</strong>
 				<p
 					>Start with Ionic
