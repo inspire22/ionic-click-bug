@@ -14,7 +14,7 @@
 			</ion-header>
 
 			<div id="container">
-				<ion-button @click.native="test()">Test button</ion-button>
+				<ion-button v-on:click.native="test()">Test button</ion-button>
 				<strong>Ready to create an app?</strong>
 				<p
 					>Start with Ionic
@@ -29,16 +29,26 @@
 import {IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton} from "@ionic/vue";
 import {defineComponent} from "vue";
 
+// you would of course import this from a module in each of your components
+function fixCompMode(components) {
+	// return components;
+	Object.entries(components).map(([name, component]) => {
+		if (!component.compatConfig && name.startsWith("Ion")) {
+			component.compatConfig = {MODE: 3};
+		}
+	});
+}
+
 export default defineComponent({
 	name: "Home",
-	components: {
+	components: fixCompMode({
 		IonContent,
 		IonHeader,
 		IonPage,
 		IonTitle,
 		IonToolbar,
 		IonButton,
-	},
+	}),
 	methods: {
 		test() {
 			window.alert("in test");
