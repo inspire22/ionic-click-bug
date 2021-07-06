@@ -1,5 +1,1 @@
-17:24 error '.native' modifier on 'v-on' directive is deprecated vue/no-deprecated-v-on-native-modifier
-
-✖ 1 problem (1 error, 0 warnings)
-
-# ionic-click-bug
+https://stackoverflow.com/questions/67179403/vue-router4-passing-object-with-router-link-to-wont-pass-dynamic-data
